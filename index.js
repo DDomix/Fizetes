@@ -1,12 +1,16 @@
-let userNamePattern=/^[a-z]{3,}$/;
-console.log(userNamePattern.test("bob"))
-console.log(userNamePattern.test("!@1"))
-console.log(userNamePattern.test("z"))
+let teljesnev=/[a-z A-Z]{1,}/;
+let orszag=/[a-z A-Z]{1,}/;
+let varos=/[a-z A-Z]{1,}/;
+let utca=/[a-z A-Z 0-9]{1,}/;
+let iranyitoszam=/[A-Z 0-9]/;
+let bankkartya=/[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}/;
+let ellenorzokod=/[0-9]{3,3}/;
+let kartyanev=/[a-z A-Z]/;
 
 
-let emailSearchPattern=/[a-z.-_]+@[a-z.-_]+/g;
-let szoveg="A petrik emailcime: petrik@petrik.hu"
-let emailCimek=szoveg.matchAll(emailSearchPattern);
-for(let email of emailCimek){
-    console.log(email[0])
-}
+document.getElementById("gomb").addEventListener("click",()=>{
+    let abankkartya=document.getElementById("kartyaszam").value;
+    if(bankkartya.test(abankkartya)==false){
+        document.getElementById("isvalid").textContent=="Nem jól töltötte ki";
+    }
+})
