@@ -211,6 +211,6 @@ document.getElementById("gomb")!.addEventListener("click",()=>{
     console.log(document.getElementById("isvalid"));
     if(document.getElementById("isvalid")?.innerText==""){
         window.alert("Sikeres fizetés");
-        
+        document.body.innerHTML="";
     }
 })
