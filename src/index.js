@@ -201,8 +201,8 @@ document.getElementById("gomb").addEventListener("click", () => {
             ize.textContent = null;
         }
     }
-    if (((_a = document.getElementById("isvalid")) === null || _a === void 0 ? void 0 : _a.textContent) == null) {
-        window.alert("kaka");
-        console.log("fasz");
+    console.log(document.getElementById("isvalid"));
+    if (((_a = document.getElementById("isvalid")) === null || _a === void 0 ? void 0 : _a.innerText) == "") {
+        window.alert("Sikeres fizetés");
     }
 });

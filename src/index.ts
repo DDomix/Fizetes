@@ -208,8 +208,9 @@ document.getElementById("gomb")!.addEventListener("click",()=>{
             ize.textContent = null;
         }
     }
-    if(document.getElementById("isvalid")?.textContent==null){
-        window.alert("kaka");
-        console.log("fasz")
+    console.log(document.getElementById("isvalid"));
+    if(document.getElementById("isvalid")?.innerText==""){
+        window.alert("Sikeres fizetés");
+        
     }
 })
